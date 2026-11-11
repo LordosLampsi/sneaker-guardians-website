@@ -1,0 +1,25 @@
+# NetBeans private configuration
+/nbproject/private/
+
+# Other editor settings
+.idea/
+.vscode/
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.log
+*.tmp
+*.swp
+*~
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Generated output
+dist/
+build/

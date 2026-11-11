@@ -1,0 +1,49 @@
+:root {
+    --obsidian: #17191d;
+    --champagne: #d7c5a1;
+    --ivory: #f4f0e9;
+    --graphite: #777b80;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--ivory);
+    color: var(--obsidian);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header,
+main,
+footer {
+    padding: 24px;
+}
+
+header {
+    background-color: var(--obsidian);
+    color: var(--white);
+}
+
+main {
+    width: min(900px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h1,
+h2 {
+    margin-top: 0;
+}
+
+footer {
+    background-color: var(--champagne);
+    text-align: center;
+}
