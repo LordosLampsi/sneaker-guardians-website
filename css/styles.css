@@ -183,3 +183,203 @@ footer {
         padding: 52px 0;
     }
 }
+/* Homepage introduction and actions */
+
+.eyebrow {
+    margin: 0 0 12px;
+    color: #725f3a;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.intro-text {
+    max-width: 650px;
+    margin-bottom: 28px;
+    color: #44484d;
+    font-size: 1.1rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.button-primary,
+.button-secondary {
+    display: inline-block;
+    padding: 13px 22px;
+    border: 2px solid var(--obsidian);
+    border-radius: 8px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.button-primary {
+    background-color: var(--obsidian);
+    color: var(--white);
+}
+
+.button-secondary {
+    background-color: transparent;
+    color: var(--obsidian);
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+    background-color: var(--champagne);
+    color: var(--obsidian);
+    transform: translateY(-2px);
+}
+
+.button-secondary:hover,
+.button-secondary:focus-visible {
+    background-color: var(--obsidian);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.button-primary:focus-visible,
+.button-secondary:focus-visible {
+    outline: 3px solid var(--champagne);
+    outline-offset: 4px;
+}
+
+/* Service cards */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.service-card {
+    min-height: 190px;
+    padding: 26px;
+    background-color: var(--white);
+    border: 1px solid rgba(23, 25, 29, 0.12);
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(23, 25, 29, 0.08);
+}
+
+.service-card h3 {
+    margin: 0 0 12px;
+    line-height: 1.25;
+}
+
+.service-card p {
+    margin: 0;
+    color: #4b4f54;
+}
+
+/* New-component mobile layout */
+
+@media (max-width: 700px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .button-primary,
+    .button-secondary {
+        width: 100%;
+    }
+
+    .service-card {
+        min-height: 0;
+    }
+}
+
+/* Booking process */
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    counter-reset: process-step;
+}
+
+.process-grid li {
+    position: relative;
+    min-height: 220px;
+    padding: 72px 24px 24px;
+
+    background-color: var(--obsidian);
+    color: var(--white);
+
+    border-radius: 14px;
+
+    counter-increment: process-step;
+}
+
+.process-grid li::before {
+    content: "0" counter(process-step);
+
+    position: absolute;
+    top: 20px;
+    left: 24px;
+
+    color: var(--champagne);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.process-grid strong,
+.process-grid span {
+    display: block;
+}
+
+.process-grid strong {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+}
+
+.process-grid span {
+    color: #d7d8da;
+}
+
+/* Contact */
+
+.contact-section > p:not(.eyebrow):not(.location) {
+    max-width: 700px;
+    font-size: 1.05rem;
+}
+
+.location {
+    margin: 26px 0;
+    color: #50545a;
+    font-weight: 700;
+}
+
+/* Process responsiveness */
+
+@media (max-width: 900px) {
+    .process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-grid li {
+        min-height: 0;
+    }
+}
